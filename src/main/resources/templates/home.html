@@ -4,15 +4,24 @@
 <head>
 
     <title>CV Pool Homepage</title>
-    <link rel="stylesheet" th:href="@{/css/demo.css}" />
+    <link rel="stylesheet" th:href="@{${pageType ==  'full' ? '/css/bootstrap.min.css' : '/css/bootstrap.grid.css'}}" />
+    <link rel="stylesheet" th:href="@{/css/font-styles.css}" />
     
 </head>
 
 <body>
 
-    <h1>--- This is the homepage ---</h1>
+    <h1 class="mx-auto" style="width: 500px;">
+        <small class="text-muted">Grant Thornton CV Pool</small>
+    </h1>
+
     <hr>
-    <p th:text="'The date and time on the server is: ' + ${theDate}" class="greenFont"></p>
+
+    <div class="container-fluid">
+        <p th:text="'The date and time on the server is: ' + ${theDate}" class=gt-light></p>
+        <p th:text="'The date and time on the server is: ' + ${theDate}" class=gt-black></p>
+        <p th:text="'The date and time on the server is: ' + ${theDate}" class=gt-black-oblique></p>
+    </div>
     
 </body>
 

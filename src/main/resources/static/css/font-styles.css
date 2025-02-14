@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('/fonts/GT-Walsheim-LC-Black-Oblique.ttf') format('truetype');
+    font-weight: bold;
+    font-style: oblique;
+}
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('/fonts/GT-Walsheim-LC-Black.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('/fonts/GT-Walsheim-LC-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+.gt-black-oblique {
+    font-family: 'CustomFont', sans-serif;
+    font-weight: bold;
+    font-style: oblique;
+}
+
+.gt-black {
+    font-family: 'CustomFont', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.gt-light {
+    font-family: 'CustomFont', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}

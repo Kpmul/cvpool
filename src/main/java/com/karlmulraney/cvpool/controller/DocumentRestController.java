@@ -58,6 +58,7 @@ public class DocumentRestController {
     public String showHome(Model model){
 
         model.addAttribute("theDate", java.time.LocalDateTime.now());
+        model.addAttribute("pageType", "full");
         
         return "home";
     }

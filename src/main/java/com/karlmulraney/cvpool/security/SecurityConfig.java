@@ -32,17 +32,19 @@ public class SecurityConfig {
                 configurer
                     .requestMatchers(HttpMethod.GET, "/","/home").permitAll()
                     .requestMatchers(HttpMethod.GET,"/css/**").permitAll()
-                    .requestMatchers(HttpMethod.GET, "/document/all").hasRole("ADMIN")
-                    .requestMatchers(HttpMethod.GET, "/document/**").hasRole("ADMIN")
-                    .requestMatchers(HttpMethod.POST, "/document/upload").hasRole("ADMIN")
-                    .requestMatchers(HttpMethod.PUT, "/document/**").hasRole("ADMIN")
-                    .requestMatchers(HttpMethod.DELETE, "/document/**").hasRole("ADMIN")
+                    .requestMatchers(HttpMethod.GET, "/all").hasRole("ADMIN")
+                    .requestMatchers(HttpMethod.GET, "/**").hasRole("ADMIN")
+                    .requestMatchers(HttpMethod.POST, "/upload").hasRole("ADMIN")
+                    .requestMatchers(HttpMethod.PUT, "/**").hasRole("ADMIN")
+                    .requestMatchers(HttpMethod.DELETE, "/**").hasRole("ADMIN")
                     
         );
 
         // Use basic auth
-        //http.httpBasic(Customizer.withDefaults());
-        http.formLogin(Customizer.withDefaults());
+        http.httpBasic(Customizer.withDefaults());
+        //http.formLogin(Customizer.withDefaults());
+
+        //http.formLogin().disable();
 
 
         http.csrf(csrf -> csrf.disable());
